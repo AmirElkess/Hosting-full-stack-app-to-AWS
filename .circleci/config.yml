@@ -27,20 +27,24 @@ jobs:
       # install dependencies in both apps
       - run:
           name: front-end install
-          command: npm --prefix ./reactnd-contacts-complete/ install
+          command: npm --prefix ./udagram-frontend/ install
 
       - run:
           name: back-end install
-          command: npm --prefix ./reactnd-contacts-server/ install
+          command: npm --prefix ./udagram-api/ install
 
       - run:
           name: front-end build
-          command: npm --prefix ./reactnd-contacts-complete/ run build
+          command: npm --prefix ./udagram-frontend/ run build
 
       - run:
           name: back-end build
-          command: npm --prefix ./reactnd-contacts-server/ run build
+          command: npm --prefix ./udagram-api/ run build
 
       - run:
           name: front-end deploy
-          command: npm --prefix ./reactnd-contacts-complete/ run deploy
+          command: npm --prefix ./udagram-frontend/ run deploy
+
+      - run:
+          name: back-end deploy
+          command: echo "TODO"

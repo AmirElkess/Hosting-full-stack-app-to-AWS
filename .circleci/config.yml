@@ -20,25 +20,25 @@ jobs:
       # install dependencies in both apps
       - run:
           name: front-end install
-          command: npm --prefix ./udagram-frontend/ install --legacy-peer-deps
+          command: npm run frontend:install
 
       - run:
           name: back-end install
-          command: npm --prefix ./udagram-api/ install
+          command: npm run backend:install
 
       - run:
           name: front-end build
-          command: npm --prefix ./udagram-frontend/ run build
+          command: npm run frontend:build
 
       - run:
           name: back-end build
-          command: npm --prefix ./udagram-api/ run build
+          command: npm run backend:build
 
       - run:
           name: front-end deploy
-          command: npm --prefix ./udagram-frontend/ run deploy
+          command: npm run frontend:deploy
 
       - run:
           name: back-end deploy
-          command: cd ./udagram-api/ && ls -al && npm run deploy
+          command: npm run backend:deploy
 

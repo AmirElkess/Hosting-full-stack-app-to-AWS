@@ -1,7 +1,14 @@
 
 {
     "scripts": {
-        
+        "backend:install": "npm --prefix ./udagram-api/ install",
+        "frontend:install": "npm --prefix ./udagram-frontend/ install --legacy-peer-deps",
+        "backend:build": "npm --prefix ./udagram-api/ run build",
+        "frontend:build": "npm --prefix ./udagram-frontend/ run build",
+        "backend:deploy": "cd ./udagram-api/ && npm run deploy",
+        "frontend:deploy": "npm --prefix ./udagram-frontend/ run deploy",
+        "backend:test": "cd ./udagram-api && npm run test",
+        "frontend:test": "cd ./udagram-frontend && npm run test"
     },
     "devDependencies": {}
 }

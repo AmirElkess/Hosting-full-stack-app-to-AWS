@@ -40,5 +40,5 @@ jobs:
 
       - run:
           name: back-end deploy
-          command: npm --prefix ./udagram-api/ run deploy
+          command: cd ./udagram-api/ && npm run deploy
 

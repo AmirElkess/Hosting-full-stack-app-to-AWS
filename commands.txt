@@ -1,0 +1,10 @@
+
+
+eb create --sample udagram-api-dev
+npm run build
+eb setenv POSTGRES_HOST="proj-db.c3kmd6xybqlt.us-east-1.rds.amazonaws.com" DB_PORT=5432 POSTGRES_PASSWORD="postgres22" POSTGRES_USERNAME="postgres" POSTGRES_DB="postgres" RDS_DIALECT="postgres" URL="http://udagram-api-dev.eba-vphvvvhb.us-east-1.elasticbeanstalk.com/" JWT_SECRET="my-jwt-secret"
+#PORT=3000 not required
+npm rub build
+eb deploy udagram-api-dev
+
+

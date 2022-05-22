@@ -40,5 +40,5 @@ jobs:
 
       - run:
           name: back-end deploy
-          command: cd ./udagram-api/ && eb deploy udagram-api-dev
+          command: cd ./udagram-api/ && eb init -y && eb deploy udagram-api-dev
 

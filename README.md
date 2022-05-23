@@ -1,12 +1,77 @@
 # Udagram
 
 Link to access the app: [Udagram](http://amirbuckettest123.s3-website-us-east-1.amazonaws.com) <br>
-Screenshots required are located in `./documentation/screenshots/` <br>
 
-This application is provided to you as an alternative starter project if you do not wish to host your own code done in the previous courses of this nanodegree. The udagram application is a fairly simple application that includes all the major components of a Full-Stack web application. <br>
+---
+## Application Infrastructure
 
+### Services in use
+* `circleci`: For managing the CI/CD pipeline 
+* `RDS`: An instance with class 'db.t3.micro' running PostgreSQL  is created
+* `EB`: Node.js API hosting
+* `S3`: Two buckets were created:
+    1. For hosting static frontend
+    2. For hosting images uploaded by users
 
+### Diagram
+![Infrastructure](./documentation/images/Infra.png)
 
+---
+## CircleCI pipeline
+
+When pushing code to the github repo, the following sequence is triggered by CircleCI:
+
+![Pipeline](./documentation/images/pipeline.png)
+
+---
+## Project dependencies
+
+### Backend (API) dependencies
+* bcrypt
+* JWT
+* aws-sdk
+* body-parser
+* cors
+* dotenv
+* email-validator
+* express
+* pg (PostgreSQL client)
+* sequelize
+
+### Frontend dependencies
+* Angular
+* Ionic
+
+### Common dependencies
+
+* Node 16.15.0
+* NPM
+
+### CLI tools
+* EB CLI 3.20.3 (Python 3.10.)
+* AWS CLI 1.22.88 (Python 3.10.)
+
+---
+## Documentation of AWS and CircleCI environments
+
+CircleCI access to the github repo:
+![placeholder](./documentation/screenshots/circle-ci-access.png)
+
+CircleCI last successful build:
+![placeholder](./documentation/screenshots/circle-ci-complete-build.png)
+
+CircleCI environment variables:
+![placeholder](./documentation/screenshots/circleci-secrets.png)
+
+AWS healthy RDS instance:
+![placeholder](./documentation/screenshots/rds.png)
+
+AWS healthy EB instance:
+![placeholder](./documentation/screenshots/eb.png)
+
+AWS healthy S3 frontend-hosting instance:
+![placeholder](./documentation/screenshots/s3.png)
+---
 ## Getting Started
 
 1. Clone this repo locally into the location of your choice.
